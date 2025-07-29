@@ -1,4 +1,4 @@
-# **README - Transformer Project for Astronomical Source Detection**
+# **README - Detecting Galaxy Clusters with Transformer Networks**
 
 ## **Overview**
 
