@@ -117,7 +117,7 @@ Transformer Configuration
 
 - Applies flux cuts to select significant sources
 
-- Splits data into training (Dec > 2.15°) and test sets
+- Splits data into training (Dec > 2.15°) and test sets: Splits data into training and test sets to keep approximately 80% of the data for training and 20% for testing the model.
 
 **Window Creation:**
 
