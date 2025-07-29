@@ -17,6 +17,7 @@ TransformerProject/
 │   ├── Model_XVI.py             # Transformer model implementation
 │   ├── GeneratorSequence.py     # Sequence generation for predictions
 │   └── submit_*.sh              # Job submission scripts for HPC
+├── data/                        # Directory with the three base catalogs serving as the initial dataset
 ├── results/                     # Output directory for processed data and models
 └── logs/                        # Log files from job executions
 ```
