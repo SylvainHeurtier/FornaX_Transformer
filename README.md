@@ -6,7 +6,9 @@ This project implements a Transformer-based neural network to analyze astronomic
 
 ## **Project Structure**
 
+```text
 TransformerProject/
+
 ├── src/
 │   ├── Constantes.py            # Configuration parameters and constants
 │   ├── Fct_tokenisation.py      # Core functions for data processing
@@ -17,7 +19,7 @@ TransformerProject/
 │   └── submit_*.sh              # Job submission scripts for HPC
 ├── results/                     # Output directory for processed data and models
 └── logs/                        # Log files from job executions
-
+```
 ## **Key Features**
 
 - Contextual Window Processing: Creates 3 arcmin² windows centered on X-ray sources
@@ -67,7 +69,7 @@ Generate predictions:
 sbatch submit_GenerateSequence.sh
 ```
 
-Configuration
+## **Configuration**
 
 Key parameters are defined in Constantes.py:
 
@@ -107,7 +109,7 @@ Transformer Configuration
 
 - BATCH_SIZE: Training batch size (32)
 
-### **Data Processing Workflow**
+## **Data Processing Workflow**
 
 **Initial Filtering:**
 
@@ -155,7 +157,7 @@ The Transformer model (Model_XVI.py) features:
 
 Autoregressive sequence generation
 
-### **Output Files**
+## **Output Files**
 
 The pipeline generates:
 
@@ -169,7 +171,7 @@ The pipeline generates:
 
 - Training curves plot
 
-### **Customization**
+## **Customization**
 To modify the analysis:
 
 Adjust parameters in Constantes.py
@@ -190,17 +192,18 @@ Correspondingly update the scaling flags:
 
 - use_log_scale_input_AGN
 
-### Performance Notes
+## Performance Notes
 
 Training requires GPU acceleration (A100 recommended)
 
-### Future Work
+## Future Work
 - Incorporate galaxy catalog data
 
 - Add photometric redshift information
 
 - Implement multi-task learning for simultaneous cluster/AGN detection
 
+## Contact
 
 **Author**: Sylvain HEURTIER
 **Email**: sylvain.heurtier@iap.fr

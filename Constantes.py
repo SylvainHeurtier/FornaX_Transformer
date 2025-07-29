@@ -33,7 +33,9 @@ EXT_LIKE_SPURIOUS = 15
 
 # Limite inferieur sur le nombre de photons des sources Xamin selectionnees
 NOMBRE_PHOTONS_MIN = 100
-Nbre2Rotations = 400
+
+# Nombre de rotations de la fenetre
+Nbre2Rotations = 3200
 
 # Dictionnaire pour la tokenisation
 

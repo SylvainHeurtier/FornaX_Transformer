@@ -174,17 +174,17 @@ for i, batch_x in enumerate(train_dataset):
 
     train_step(batch_x)
     
-    if i % 100 == 0:
-        batch_val = next(iter(test_dataset))
-        val_step(batch_val)
-        
-        if val_loss.result() < best_val_loss:
-            best_val_loss = val_loss.result()
-            best_weights = model.get_weights()
-            wait = 0
-        else:
-            wait += 1
+    batch_val = next(iter(test_dataset))
+    val_step(batch_val)
+    
+    if val_loss.result() < best_val_loss:
+        best_val_loss = val_loss.result()
+        best_weights = model.get_weights()
+        wait = 0
+    else:
+        wait += 1
 
+    if i % 100 == 0:
         print(
             f"Step {i}: "
             f"Train Loss = {train_loss.result():.4f}, "
@@ -193,10 +193,10 @@ for i, batch_x in enumerate(train_dataset):
             f"Wait = {wait}/{patience}"
         )
         
-        loss_history.append(train_loss.result())
-        val_loss_history.append(val_loss.result())
-        train_loss.reset_states()
-        val_loss.reset_states()
+    loss_history.append(train_loss.result())
+    val_loss_history.append(val_loss.result())
+    train_loss.reset_states()
+    val_loss.reset_states()
 
 if best_weights is not None:
     model.set_weights(best_weights)

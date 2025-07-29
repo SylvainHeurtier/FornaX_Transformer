@@ -212,6 +212,11 @@ windows_test            = discretise_et_complete(list_windows_test_augm, list_wi
 ClustersInWindows_test  = discretise_et_complete(list_windows_test_augm, info_clusters_test_augm, int(VOCAB_SIZE-NOMBRE_TOKENS_SPECIAUX), global_stats_input_clusters, SELECTED_COLUMNS_input_clusters, use_log_scale_input_clusters, PAD_TOKEN, MAX_CLUSTERS)
 AGNInWindows_test       = discretise_et_complete(list_windows_test_augm, info_AGN_test_augm, int(VOCAB_SIZE-NOMBRE_TOKENS_SPECIAUX), global_stats_input_AGN, SELECTED_COLUMNS_input_AGN, use_log_scale_input_AGN, PAD_TOKEN, MAX_AGN )
 
+print("\n=== TEST ===")
+print(f"len(windows_test) = {len(windows_test)}")
+print(f"len(ClustersInWindows_test) = {len(ClustersInWindows_test)}")
+print(f"len(AGNInWindows_test) = {len(AGNInWindows_test)}")
+
 windows_train           = discretise_et_complete(list_windows_train_augm, list_windows_train_augm, int(VOCAB_SIZE-NOMBRE_TOKENS_SPECIAUX), global_stats_Xamin, SELECTED_COLUMNS_Xamin, use_log_scale_Xamin, PAD_TOKEN, MAX_SOURCES)
 ClustersInWindows_train = discretise_et_complete(list_windows_train_augm, info_clusters_train_augm, int(VOCAB_SIZE-NOMBRE_TOKENS_SPECIAUX), global_stats_input_clusters, SELECTED_COLUMNS_input_clusters, use_log_scale_input_clusters, PAD_TOKEN, MAX_CLUSTERS )
 AGNInWindows_train      = discretise_et_complete(list_windows_train_augm, info_AGN_train_augm, int(VOCAB_SIZE-NOMBRE_TOKENS_SPECIAUX), global_stats_input_AGN, SELECTED_COLUMNS_input_AGN, use_log_scale_input_AGN, PAD_TOKEN, MAX_AGN )
@@ -220,11 +225,6 @@ print("\n=== TRAIN ===")
 print(f"len(windows_train) = {len(windows_train)}")
 print(f"len(ClustersInWindows_train) = {len(ClustersInWindows_train)}")
 print(f"len(AGNInWindows_train) = {len(AGNInWindows_train)}")
-
-print("\n=== TEST ===")
-print(f"len(windows_test) = {len(windows_test)}")
-print(f"len(ClustersInWindows_test) = {len(ClustersInWindows_test)}")
-print(f"len(AGNInWindows_test) = {len(AGNInWindows_test)}")
 
 # //////////// Concatenation des donnees Xamin avec celles sur les amas et les AGN ////////////
 print(" ")
