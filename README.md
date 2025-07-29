@@ -2,7 +2,7 @@
 
 ## **Overview**
 
-This project implements a Transformer-based neural network to analyze astronomical catalogs and detect galaxy clusters (AMAS) and Active Galactic Nuclei (AGN) from X-ray source data (Xamin). The system processes spatial data by creating contextual windows around sources, applying data augmentation techniques, and transforming the data into tokenized sequences suitable for Transformer models.
+This project implements a Transformer-based neural network to analyze astronomical catalogs and detect galaxy clusters and Active Galactic Nuclei (AGN) from X-ray source data (Xamin). The system processes spatial data by creating contextual windows around sources, applying data augmentation techniques, and transforming the data into tokenized sequences suitable for Transformer models.
 
 ## **Project Structure**
 
